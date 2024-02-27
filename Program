@@ -1,0 +1,94 @@
+1.Python code to find odd or even 
+    code:
+    def check_odd_or_even(num):
+      if num % 2 == 0:
+        print(f"{num} is even.")
+      else:
+        print(f"{num} is odd.")
+    number = int(input("Enter a number: "))
+    check_odd_or_even(number)
+
+    output:
+          Enter a number : 4
+          4 is even
+
+2.To find a factorial of the number
+     code: 
+        def factorial(n):
+           if n == 0:
+              return 1
+           else:
+              return n * factorial(n-1)
+
+         number = int(input("Enter a number: "))
+         result = factorial(number)
+         print(f"The factorial of {number} is {result}.")
+        
+       output: 
+         Enter a number : 5
+         The factorial of 5 is 120
+
+3.Program to reverse a number 
+     code: 
+         def reverse_number(num):
+           reversed_num = 0
+            while num > 0:
+              digit = num % 10
+        reversed_num = (reversed_num * 10) + digit
+              num //= 10
+            return reversed_num
+
+         reversed_number = reverse_number(number)
+         print(f"The reversed number of {number} is {reversed_number}.")
+
+        output:
+        enter a number: 34567
+        The reversed number of 34567 is 76543
+         
+4.Check whether the program is palindrom or not
+
+  code:
+      def is_palindrome(num):
+    original_num = num
+    reversed_num = 0
+    while num > 0:
+        digit = num % 10
+        reversed_num = (reversed_num * 10) + digit
+        num //= 10
+    return original_num == reversed_num
+
+number = int(input("Enter a number: "))
+if is_palindrome(number):
+    print(f"{number} is a palindrome.")
+else:
+    print(f"{number} is not a palindrome.")
+
+     output: 
+        Enter a number : 1001
+        1001 is a palindrome
+
+5. Find whether the number is prime or not
+
+   code:
+        def is_prime(num):
+    if num <= 1:
+        return False
+    elif num == 2:
+        return True
+    elif num % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(num**0.5) + 1, 2):
+            if num % i == 0:
+                return False
+        return True
+
+number = int(input("Enter a number: "))
+if is_prime(number):
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number.")
+
+      output: 
+           enter a number : 5
+           5 is a prime number
