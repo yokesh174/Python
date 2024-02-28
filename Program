@@ -92,3 +92,36 @@ else:
       output: 
            enter a number : 5
            5 is a prime number
+
+6.swapping two number with using function
+      
+      code:
+         def swap_numbers(a, b):
+           temp = a
+           a = b
+           b = temp
+           return a, b
+
+         x = 5
+         y = 10
+         x, y = swap_numbers(x, y)
+         print("x =", x)
+         print("y =", y)
+
+      output:
+            x = 10
+            y = 5
+7.swapping two number without temp
+     
+      code:
+       def swap_numbers(a, b):
+         a = a + b
+         b = a - b
+         a = a - b
+         return a, b
+
+       x = 5
+       y = 10
+       x, y = swap_numbers(x, y)
+       print("x =", x)
+       print("y =", y)
